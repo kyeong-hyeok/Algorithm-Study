@@ -6,6 +6,7 @@
 
 # 9부터 0까지 2개 뽑기 -> 98,97,96, ... 90
 # 9부터 0까지 n개 뽑기 -> n자리 수
+
 from itertools import combinations
 
 n = int(input())
