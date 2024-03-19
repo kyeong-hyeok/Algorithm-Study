@@ -30,7 +30,7 @@
 ## 📘 유형별 문제
 #### 주요 유형 문제
 - [구현](https://www.acmicpc.net/workbook/view/7316)
-- [BFS&DFS](https://www.acmicpc.net/workbook/view/7313)
+- [BFS](https://www.acmicpc.net/workbook/view/7313), [DFS&BFS](https://www.acmicpc.net/workbook/view/1833)
 - [DP](https://www.acmicpc.net/workbook/view/7319)
 - [백트래킹](https://www.acmicpc.net/workbook/view/7315)
 - [그리디](https://www.acmicpc.net/workbook/view/7320)
