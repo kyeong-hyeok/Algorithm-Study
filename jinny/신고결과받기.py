@@ -35,8 +35,7 @@ def solution(id_list, report, k):
             answer.append(count)
         else :
             answer.append(0)
-    return answer        
-
+    return answer       
 def main():
     # 입력 예시
     id_list_1 = ["muzi", "frodo", "apeach", "neo"]
