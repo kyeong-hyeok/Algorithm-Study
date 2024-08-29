@@ -14,27 +14,43 @@ for i in range(m):
     arr[a].append(b)
     arr[b].append(a)
 
+answer_dfs = 0
+def dfs(k):
 
-def bfs(k):
+    global answer_dfs
+    visited[k]= True
+    
+    for i in arr[k]:
+        if not visited[i]:
+            visited[i] = True
+            dfs(i)
+            answer_dfs+=1
 
-    answer = 0
-    que = deque()
+dfs(1)
+print(answer_dfs)
 
-    que.append(k)
 
-    while que:
-        a = que.popleft()
-        visited[a] = True
 
-        for i in arr[a]:
-            if not visited[i]:
-                que.append(i)
-                visited[i] = True
-                answer += 1
+# def bfs(k):
 
-    return answer
+#     answer = 0
+#     que = deque()
 
-print(bfs(1))
+#     que.append(k)
+
+#     while que:
+#         a = que.popleft()
+#         visited[a] = True
+
+#         for i in arr[a]:
+#             if not visited[i]:
+#                 que.append(i)
+#                 visited[i] = True
+#                 answer += 1
+
+#     return answer
+
+# print(bfs(1))
 
 # def get_parent(x):
 #     if parent[x] == x:
