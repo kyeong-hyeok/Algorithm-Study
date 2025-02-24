@@ -11,11 +11,11 @@ for i in range(1,n+1):
 
 dp=[0]*(n+1)
 
-arr.sort(key=lambda x:x[1])
+arr.sort(key=lambda x:x[3])
 
 for i in range(1,n+1):
     for j in range(0,i):
-        if arr[i][3] > arr[j][3]:
+        if arr[i][1] > arr[j][1]:
             dp[i] = max(dp[i],dp[j]+arr[i][2])
 
 max_height=max(dp)
