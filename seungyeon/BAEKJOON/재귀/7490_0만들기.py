@@ -29,9 +29,9 @@ def recur(sum, index, sign, string, num ):
         if (sum == 0):
             print(string)
     else:
+        recur(sum, index+1 ,sign,string+" "+str(index+1), num*10 + index + 1)
         recur(sum+num*sign, index+1,1,string+"+"+ str(index+1),index+1)
         recur(sum+num*sign, index+1,-1,string+"-"+str(index+1),index+1)
-        recur(sum, index+1 ,sign,string+" "+str(index+1), num*10 + index + 1)
 
 n=int(input())
 for i in range(n):
