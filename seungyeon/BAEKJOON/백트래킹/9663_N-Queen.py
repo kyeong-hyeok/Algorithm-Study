@@ -55,7 +55,11 @@ def dfs(row):
         cnt += 1
 
     else:
-        for col in range(row):
+        for col in range(n):
             visited[row] = col
             if check(row):
                 dfs(row+1)
+
+dfs(0)
+print(cnt)
+
