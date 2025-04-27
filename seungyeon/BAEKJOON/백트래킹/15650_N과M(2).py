@@ -1,30 +1,26 @@
 import sys
-from itertools import combinations
+input=sys.stdin.readline
 
-input = sys.stdin.readline
-n,m = map(int,input().split())
+n,m=map(int,input().split())
 
-num = [i for i in range(1,n+1)]
-
-
-# for i in combinations(num,m):
-#     print(*i)
-
-
-visited=[False]*(n+1)
-arr = []
+visited=[False] * (n+1)
+answer=[]
 
 def dfs(depth):
+
+
     if depth == m:
-        print(''.join(map(str,arr)))
-        return
+        print(*answer)
+        return answer
     
-    for i in range(1,n+1):
-        if not visited[i]:
+    for i in range(1,n+1) :
+
+        if not visited[i]and (len(answer) == 0  or i > answer[-1]):
             visited[i] = True
-            arr.append(i)
+            answer.append(i)
             dfs(depth+1)
             visited[i] = False
-            arr.pop()
+            answer.pop()
+
 
 dfs(0)
