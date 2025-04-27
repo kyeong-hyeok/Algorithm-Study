@@ -39,5 +39,4 @@ for i in range(t):
             union_parent(a,b)
             answer += 1
 
-
     print(n-answer)   
